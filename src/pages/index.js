@@ -6,13 +6,29 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-    const contentData = posts[0].node.frontmatter;
+    const mdData = posts[0].node.frontmatter;
 
     return (
       <section className="section">
         <div className="container">
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">DNA</h1>
+            <div className="mainTitle">
+              <h4>{mdData.mainTitle}</h4>
+              <p>{mdData.description}</p>
+            </div>
+            <br />
+            <div className="mission-vision">
+              <div className="vision">
+                <h4>{mdData.visionTitle}</h4>
+                <p>{mdData.visionDescription}</p>
+              </div>
+              <br />
+              <div className="mission">
+                <h4>{mdData.missionTitle}</h4>
+                <p>{mdData.missionDescription}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
