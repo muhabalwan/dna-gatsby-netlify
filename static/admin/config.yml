@@ -29,18 +29,17 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-          - {label: "TraTo", name: "traTo", widget: "string"}
-          # - label: "members"
-          #   name: "members"
-          #   widget: "list"
-          #   fields:
-          #     - label: member
-          #       name: member
-          #       widget: object
-          #       fields:
-          #         - {label: Name, name: name, widget: string}
-          #         - {label: image, name: image, widget: image}
-          #         - {label: description, name: description, widget: string}
+          - label: "members"
+            name: "members"
+            widget: "list"
+            fields:
+              - label: member
+                name: member
+                widget: object
+                fields:
+                  - {label: Name, name: name, widget: string}
+                  - {label: image, name: image, widget: image}
+                  - {label: description, name: description, widget: string}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
