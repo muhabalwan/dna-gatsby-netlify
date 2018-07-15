@@ -29,6 +29,18 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "TraTo", name: "traTo", widget: "string"}
+          # - label: "members"
+          #   name: "members"
+          #   widget: "list"
+          #   fields:
+          #     - label: member
+          #       name: member
+          #       widget: object
+          #       fields:
+          #         - {label: Name, name: name, widget: string}
+          #         - {label: image, name: image, widget: image}
+          #         - {label: description, name: description, widget: string}
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
@@ -43,3 +55,16 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+      # adding index.md to main folder
+      - file: "src/pages/main/index.md"
+        label: "main Page"
+        name: "main index"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Main Title, name: mainTitle, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Vision Title, name: visionTitle, widget: string}
+          - {label: Vision Description, name: visionDescription, widget: string}
+          - {label: Mission Title, name: missionTitle, widget: string}
+
