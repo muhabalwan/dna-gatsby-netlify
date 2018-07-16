@@ -1,43 +1,11 @@
 ---
-templateKey: 'about-page'
-path: /about
+templateKey: about-page
 title: About as
-test: sample1
-traTo: some text here
-# members:
-#     member1: 
-#         image: http://www.rhlaw.com/blog/wp-content/uploads/2011/10/kitten-300x300.jpg
-#         name: Muhab Alwan
-#         description: hi I am a test version of a member
-#     member2:
-#         image: http://www.rhlaw.com/blog/wp-content/uploads/2011/10/kitten-300x300.jpg
-#         name: Bahila Hijazi
-#         description: hi I am another test version of a member
-#     member3:
-#         image: http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png
-#         name: test3
-#         description:  kokokokokokokokokokokoko 1 
-#     member4:
-#         image: http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png
-#         name: test4
-#         description: kokokokokokokoko 2 
-#     member5:
-#         image: http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png
-#         name: test5
-#         description:  asdasd sd adsa 3 
-#     member6:
-#         image: http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png
-#         name: test6
-#         description: asdsad qwr dsad a 4 
-#     member7:
-#         image: http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png
-#         name: test7
-#         description: asd ascxzvdsghrsdads 5
-#     member8:
-#         image: http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/user-male-icon.png
-#         name: test8
-#         description: asdsa dcxzv vccxvb 6
-
+members:
+  - member:
+      description: 'Web developer living in Berlin '
+      image: /img/familyguy-1-.png
+      name: Muhab Alwan
 ---
 
 ### Shade-grown coffee
