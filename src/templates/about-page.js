@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Content, { HTMLContent } from "../components/Content";
-import "./about-page.scss";
+import css from "./about-page.module.scss";
 
 export const AboutPageTemplate = data => {
   const { members } = data;
@@ -14,12 +14,12 @@ export const AboutPageTemplate = data => {
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 Our Team
               </h2>
-              <div className={"card-list"}>
+              <div className={css.cardList}>
                 {members.map(member => {
                   return (
-                    <div className={"card"} key={member.name}>
+                    <div className={css.card} key={member.name}>
                       <h4> {member.name} </h4>
-                      <img className="img" src={member.image} />
+                      <img className={css.img} src={member.image} />
                       <p> {member.description} </p>
                     </div>
                   );
