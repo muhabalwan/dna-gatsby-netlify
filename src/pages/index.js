@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
+import "./index.scss";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -13,17 +14,16 @@ export default class IndexPage extends React.Component {
         <div className="container">
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">DNA</h1>
-            <div className="mainTitle">
+            <div className="content-primary">
               <h4>{mdData.mainTitle}</h4>
               <p>{mdData.description}</p>
             </div>
             <br />
-            <div className="mission-vision">
+            <div className="content-secondary">
               <div className="vision">
                 <h4>{mdData.visionTitle}</h4>
                 <p>{mdData.visionDescription}</p>
               </div>
-              <br />
               <div className="mission">
                 <h4>{mdData.missionTitle}</h4>
                 <p>{mdData.missionDescription}</p>

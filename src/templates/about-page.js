@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Content, { HTMLContent } from "../components/Content";
+import "./about-page.scss";
 
 export const AboutPageTemplate = data => {
-  const { traTo } = data;
-  console.log("traTo", traTo);
+  const { members } = data;
   return (
     <section className="section section--gradient">
       <div className="container">
@@ -14,17 +14,17 @@ export const AboutPageTemplate = data => {
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 Our Team
               </h2>
-              {
-                //   Object.keys(members).map(key => {
-                //   return (
-                //     <div>
-                //       <h4>{members[key].name}</h4>
-                //       <img src={members[key].image} alt="photo" />
-                //       <p>{members[key].description}</p>
-                //     </div>
-                //   );
-                // })
-              }
+              <div className={"card-list"}>
+                {members.map(member => {
+                  return (
+                    <div className={"card"} key={member.name}>
+                      <h4> {member.name} </h4>
+                      <img className="img" src={member.image} />
+                      <p> {member.description} </p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@ const AboutPage = ({ data }) => {
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
       content={post.html}
-      traTo={post.frontmatter.traTo}
+      members={post.frontmatter.members}
     />
   );
 };
@@ -65,12 +65,24 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
-        test
-        traTo
+        members {
+          description
+          image
+          name
+        }
       }
     }
   }
 `;
+
+// members {
+//   member {
+//     name
+//     description
+//     image
+//   }
+// }
+
 // members {
 //   member1 {
 //     image
