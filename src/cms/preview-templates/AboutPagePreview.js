@@ -7,8 +7,7 @@ const AboutPagePreview = ({ entry, widgetFor }) => {
     <AboutPageTemplate
       title={entry.getIn(["data", "title"])}
       content={widgetFor("body")}
-      traTo={entry.getIn("data", "traTo")}
-      // members={entry.getIn(["data", "members"])}
+      members={entry.getIn(["data", "members"])}
     />
   );
 };

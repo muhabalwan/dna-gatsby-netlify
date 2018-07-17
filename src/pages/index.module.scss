@@ -1,0 +1,45 @@
+// TODO: take generic classes and store them in one place
+
+.container {
+  max-width: 1700px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4 rem 0rem;
+}
+.contentPrimary {
+  padding-bottom: 20px;
+  h1 {
+    padding-bottom: 30px;
+    font-size: 2.5rem;
+  }
+  font-weight: bold;
+}
+
+.contentSecondary {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+}
+
+.content {
+  text-align: center;
+}
+
+.vision {
+  h4 {
+    font-size: 2rem;
+    color: green;
+  }
+  font-weight: bold;
+}
+
+.mission {
+  h4 {
+    font-size: 2rem;
+    color: red;
+  }
+  font-weight: bold;
+}

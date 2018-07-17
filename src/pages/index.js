@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
+import css from "./index.module.scss";
 
 export default class IndexPage extends React.Component {
   render() {
@@ -9,22 +10,20 @@ export default class IndexPage extends React.Component {
     const mdData = posts[0].node.frontmatter;
 
     return (
-      <section className="section">
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">DNA</h1>
-            <div className="mainTitle">
-              <h4>{mdData.mainTitle}</h4>
+      <section className={css.section}>
+        <div className={css.container}>
+          <div className={css.content}>
+            <div className={css.contentPrimary}>
+              <h1>{mdData.mainTitle}</h1>
               <p>{mdData.description}</p>
             </div>
             <br />
-            <div className="mission-vision">
-              <div className="vision">
+            <div className={css.contentSecondary}>
+              <div className={css.vision}>
                 <h4>{mdData.visionTitle}</h4>
                 <p>{mdData.visionDescription}</p>
               </div>
-              <br />
-              <div className="mission">
+              <div className={css.mission}>
                 <h4>{mdData.missionTitle}</h4>
                 <p>{mdData.missionDescription}</p>
               </div>
